@@ -1,0 +1,25 @@
+{
+  "name": "@ai-contributor/logger",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "test:watch": "vitest --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@ai-contributor/eslint-config": "workspace:*",
+    "@ai-contributor/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "tsup": "^8.2.3",
+    "typescript": "^5"
+  }
+}

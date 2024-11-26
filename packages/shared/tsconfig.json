@@ -1,0 +1,10 @@
+{
+  "extends": "@ai-contributor/typescript-config/base.json",
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "outDir": "./dist",
+    "types": ["vitest/globals", "node"]
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["."],
+}
