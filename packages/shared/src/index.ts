@@ -3,8 +3,3 @@ export class WrappedError extends Error {
     super(message);
   }
 }
-
-export enum VcsProvider {
-  GitHub = 'GitHub',
-  GitLab = 'GitLab',
-}
