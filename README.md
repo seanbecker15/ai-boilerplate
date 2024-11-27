@@ -1,19 +1,18 @@
-# AI Contributor
+# AI Boilerplate
 
 TypeScript monorepo powered by Turborepo.
 
 ## Apps and Packages
 
-- `cli`: a command line utility that interfaces with the backend
-- `api`: a server that orchestrates changes to code repositories
+- `api`: a web server
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@ai-contributor/database`: a prism ORM library to manage our db schema
-- `@ai-contributor/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@ai-contributor/logger`: a log utility
-- `@ai-contributor/shared`: contains utils, domain types, and constants
-- `@ai-contributor/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@ai-contributor/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@ai-boilerplate/database`: a prism ORM library to manage our db schema
+- `@ai-boilerplate/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@ai-boilerplate/logger`: a log utility
+- `@ai-boilerplate/shared`: contains utils, domain types, and constants
+- `@ai-boilerplate/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@ai-boilerplate/ui`: a stub React component library shared by both `web` and `docs` applications
 ## Contributing
 
 ### Build
@@ -21,16 +20,24 @@ TypeScript monorepo powered by Turborepo.
 To build all apps and packages, run the following command:
 
 ```sh
-cd ai-contributor
+cd ai-boilerplate
 pnpm build
 ```
 
 ### Develop
 
+To set up local database:
+```sh
+docker compose up -d # spin up database container
+cp .env.example .env # set environment variables (used by prisma:dev commands)
+pnpm prisma:dev -- migrate dev # run database migration
+pnpm prisma:dev -- migrate reset --force # seed database
+```
+
 To develop all apps and packages, run the following command:
 
 ```sh
-cd ai-contributor
+cd ai-boilerplate
 pnpm dev
 ```
 
@@ -39,7 +46,7 @@ pnpm dev
 To run tests you can either run once or watch:
 
 ```sh
-cd ai-contributor
+cd ai-boilerplate
 pnpm test:watch # or pnpm test
 ```
 

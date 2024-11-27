@@ -1,5 +1,5 @@
 {
-  "name": "@ai-contributor/logger",
+  "name": "@ai-boilerplate/logger",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -16,8 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ai-contributor/eslint-config": "workspace:*",
-    "@ai-contributor/typescript-config": "workspace:*",
+    "@ai-boilerplate/eslint-config": "workspace:*",
+    "@ai-boilerplate/typescript-config": "workspace:*",
     "@types/node": "^20",
     "tsup": "^8.2.3",
     "typescript": "^5"

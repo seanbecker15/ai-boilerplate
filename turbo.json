@@ -18,12 +18,9 @@
       "cache": false,
       "persistent": true
     },
-    "db:migrate:deploy": {},
-    "db:push": {},
-    "db:seed": {},
-    "generate": {
-      "dependsOn": ["^generate"]
-    },
+    "prisma:dev": {},
+    "prisma:deploy": {},
+    "prisma:generate": {},
     "test": {
       "outputs": ["coverage/**"],
       "dependsOn": []

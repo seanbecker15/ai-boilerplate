@@ -1,30 +1,29 @@
 {
-  "name": "@ai-contributor/database",
+  "name": "@ai-boilerplate/database",
   "version": "1.0.0",
   "exports": {
     ".": "./src/client.ts"
   },
   "scripts": {
-    "local": "dotenv -e ../../.env -- prisma", 
-    "db:migrate:deploy": "prisma migrate deploy",
-    "db:migrate:dev": "pnpm local migrate dev",
-    "db:push": "pnpm local db push",
-    "db:seed": "tsx src/seed.ts",
+    "prisma:dev": "dotenv -e ../../.env -- prisma",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:generate": "prisma generate",
     "dev": "tsup src/* --watch",
     "format": "prisma format",
-    "generate": "prisma generate",
     "lint": "eslint . --max-warnings 0",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate",
-    "studio": "prisma studio"
+    "prebuild": "npm run prisma:generate",
+    "predev": "npm run prisma:generate"
   },
   "dependencies": {
-    "@ai-contributor/logger": "workspace:*",
+    "@ai-boilerplate/logger": "workspace:*",
     "@prisma/client": "^5.10.2"
   },
+  "prisma": {
+    "seed": "tsx src/seed.ts"
+  },
   "devDependencies": {
-    "@ai-contributor/eslint-config": "*",
-    "@ai-contributor/typescript-config": "*",
+    "@ai-boilerplate/eslint-config": "*",
+    "@ai-boilerplate/typescript-config": "*",
     "@types/node": "^20",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",

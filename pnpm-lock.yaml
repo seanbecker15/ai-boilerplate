@@ -33,7 +33,7 @@ importers:
 
   apps/api:
     dependencies:
-      '@ai-contributor/logger':
+      '@ai-boilerplate/logger':
         specifier: workspace:*
         version: link:../../packages/logger
       body-parser:
@@ -49,10 +49,10 @@ importers:
         specifier: ^1.10.0
         version: 1.10.0
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/body-parser':
@@ -85,7 +85,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@ai-contributor/ui':
+      '@ai-boilerplate/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -98,10 +98,10 @@ importers:
         specifier: 19.0.0-rc-f994737d14-20240522
         version: 19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522)
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
@@ -125,7 +125,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@ai-contributor/ui':
+      '@ai-boilerplate/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -138,10 +138,10 @@ importers:
         specifier: 19.0.0-rc-f994737d14-20240522
         version: 19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522)
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
@@ -165,17 +165,17 @@ importers:
 
   packages/database:
     dependencies:
-      '@ai-contributor/logger':
+      '@ai-boilerplate/logger':
         specifier: workspace:*
         version: link:../logger
       '@prisma/client':
         specifier: ^5.10.2
         version: 5.17.0(prisma@5.17.0)
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: '*'
         version: link:../eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: '*'
         version: link:../typescript-config
       '@types/node':
@@ -229,10 +229,10 @@ importers:
 
   packages/logger:
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
@@ -247,10 +247,10 @@ importers:
 
   packages/shared:
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
@@ -271,10 +271,10 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
-      '@ai-contributor/eslint-config':
+      '@ai-boilerplate/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@ai-contributor/typescript-config':
+      '@ai-boilerplate/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@turbo/gen':

@@ -1,4 +1,4 @@
-import { log } from '@ai-contributor/logger';
+import { log } from '@ai-boilerplate/logger';
 import { createServer } from "./server";
 import { Example } from './example';
 

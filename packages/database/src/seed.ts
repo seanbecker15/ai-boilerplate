@@ -1,5 +1,5 @@
 import type { User } from "@prisma/client";
-import { log } from "@ai-contributor/logger";
+import { log } from "@ai-boilerplate/logger";
 import { prisma } from "./client";
 
 

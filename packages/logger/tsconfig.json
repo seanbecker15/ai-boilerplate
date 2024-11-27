@@ -1,5 +1,5 @@
 {
-  "extends": "@ai-contributor/typescript-config/base.json",
+  "extends": "@ai-boilerplate/typescript-config/base.json",
   "compilerOptions": {
     "lib": ["ES2015"],
     "outDir": "./dist",

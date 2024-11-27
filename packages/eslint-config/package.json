@@ -1,5 +1,5 @@
 {
-  "name": "@ai-contributor/eslint-config",
+  "name": "@ai-boilerplate/eslint-config",
   "version": "0.0.0",
   "private": true,
   "files": [

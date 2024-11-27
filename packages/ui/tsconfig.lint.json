@@ -1,5 +1,5 @@
 {
-  "extends": "@ai-contributor/typescript-config/react-library.json",
+  "extends": "@ai-boilerplate/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },
