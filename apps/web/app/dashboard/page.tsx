@@ -4,17 +4,10 @@ import { useState } from "react";
 import { Code } from "@ai-boilerplate/ui/code";
 import { useAuth } from "@clerk/nextjs";
 
-type ChatItem = {
-  origin: "client" | "server";
-  message: string;
-};
-
 export default function Page() {
   const { getToken } = useAuth();
   const [input, setInput] = useState("");
-  const [items, setItems] = useState<ChatItem[]>([]);
   const [response, setResponse] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);
@@ -22,6 +15,7 @@ export default function Page() {
 
   const handleSubmit = async () => {
     try {
+      setResponse("");
       const response = await fetch("http://localhost:5001/api/chat/stream", {
         method: "GET",
         headers: {
@@ -57,10 +51,9 @@ export default function Page() {
         <Code>{response}</Code>
       </div>
 
-      <h2>Send a message</h2>
+      <textarea value={input} onChange={handleInputChange} />
       <div>
-        <textarea value={input} onChange={handleInputChange} />
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}>Send</button>
       </div>
     </div>
   );
