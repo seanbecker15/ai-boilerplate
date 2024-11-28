@@ -2,7 +2,6 @@ import type { User } from "@prisma/client";
 import { log } from "@ai-boilerplate/logger";
 import { prisma } from "./client";
 
-
 const DEFAULT_USERS = [
   // Add your own user to pre-populate the database with
   {
@@ -17,7 +16,7 @@ void (async () => {
       DEFAULT_USERS.map((user) =>
         prisma.user.upsert({
           where: {
-            email: user.email ?? '',
+            email: user.email ?? "",
           },
           update: {
             ...user,

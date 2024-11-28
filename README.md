@@ -13,6 +13,7 @@ TypeScript monorepo powered by Turborepo.
 - `@ai-boilerplate/shared`: contains utils, domain types, and constants
 - `@ai-boilerplate/typescript-config`: `tsconfig.json`s used throughout the monorepo
 - `@ai-boilerplate/ui`: a stub React component library shared by both `web` and `docs` applications
+
 ## Contributing
 
 ### Build
@@ -27,6 +28,7 @@ pnpm build
 ### Develop
 
 To set up local database:
+
 ```sh
 docker compose up -d # spin up database container
 cp .env.example .env # set environment variables (used by prisma:dev commands)
