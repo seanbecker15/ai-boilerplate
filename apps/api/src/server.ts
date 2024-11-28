@@ -1,8 +1,16 @@
 import { json, urlencoded } from "body-parser";
 import express, { type Express } from "express";
-import { clerkMiddleware } from "@clerk/express";
+import { AuthObject, clerkMiddleware } from "@clerk/express";
 import morgan from "morgan";
 import cors from "cors";
+
+declare global {
+  namespace Express {
+    interface Request {
+      auth: AuthObject;
+    }
+  }
+}
 
 export const createServer = (): Express => {
   const app = express();
