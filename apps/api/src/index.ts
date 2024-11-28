@@ -1,7 +1,7 @@
 import { log } from "@ai-boilerplate/logger";
+import { requireAuth } from "@clerk/express";
 import { createServer } from "./server";
 import { Example } from "./example";
-import { requireAuth } from "@clerk/express";
 import { Chat } from "./chat";
 
 const port = process.env.PORT || 5001;

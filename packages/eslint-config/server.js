@@ -43,5 +43,6 @@ module.exports = {
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
+    "@typescript-eslint/no-namespace": ["error", { allowDeclarations: true }],
   },
 };

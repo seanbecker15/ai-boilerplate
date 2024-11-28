@@ -4,7 +4,7 @@ export class Example {
   router: Router = Router();
   constructor() {
     this.router.get("/", (req, res) => {
-      let resp: any = { ok: true };
+      const resp: Record<string, unknown> = { ok: true };
       if (req.auth.userId) {
         resp.isAuthenticated = true;
       } else {
